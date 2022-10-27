@@ -65,10 +65,14 @@ public class Ventana6 extends JFrame {
 		btnNewButton.setBounds(48, 61, 85, 21);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				try {
 				double kilos = Double.parseDouble(peso.getText());
 	            double metros    = Double.parseDouble(altura.getText());
 	            double    bmi       = (kilos/(metros*metros));
 				lblNewLabel.setText("IMC: "+Double.toString(bmi));
+				} catch (NullPointerException | NumberFormatException ex6) {
+                    System.out.println("Inserte un valor correcto");
+                }
 			}
 		});
 		contentPane.add(btnNewButton);
