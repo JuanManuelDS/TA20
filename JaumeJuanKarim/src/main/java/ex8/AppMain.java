@@ -3,7 +3,8 @@ package ex8;
 public class AppMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		Ejercicio8 ej8 = new Ejercicio8();
 
 	}
 
