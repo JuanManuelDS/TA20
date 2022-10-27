@@ -16,8 +16,8 @@ public class Ventana6 extends JFrame {
 	private JPanel contentPane;
 	private JTextField peso;
 	private JTextField altura;
-	private JLabel lblNewLabel_1;
-	private JLabel lblNewLabel_2;
+	private JLabel labelPeso;
+	private JLabel labelAltura;
 
 	/**
 	 * Launch the application.
@@ -58,7 +58,7 @@ public class Ventana6 extends JFrame {
 		
 
 		final JLabel lblNewLabel = new JLabel(" ");
-		lblNewLabel.setBounds(228, 65, 45, 13);
+		lblNewLabel.setBounds(228, 65, 100, 13);
 		contentPane.add(lblNewLabel);
 		
 		JButton btnNewButton = new JButton("Calcula IMC");
@@ -77,13 +77,13 @@ public class Ventana6 extends JFrame {
 		});
 		contentPane.add(btnNewButton);
 		
-		lblNewLabel_1 = new JLabel("Peso: ");
-		lblNewLabel_1.setBounds(26, 13, 45, 13);
-		contentPane.add(lblNewLabel_1);
+		labelPeso = new JLabel("Peso: ");
+		labelPeso.setBounds(26, 13, 45, 13);
+		contentPane.add(labelPeso);
 		
-		lblNewLabel_2 = new JLabel("Altura: ");
-		lblNewLabel_2.setBounds(215, 13, 45, 13);
-		contentPane.add(lblNewLabel_2);
+		labelAltura = new JLabel("Altura: ");
+		labelAltura.setBounds(215, 13, 45, 13);
+		contentPane.add(labelAltura);
 		
 	
 	}
