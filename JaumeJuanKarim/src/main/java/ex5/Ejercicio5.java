@@ -36,6 +36,7 @@ public class Ejercicio5 extends JFrame {
 		JTextArea textArea = new JTextArea();
 		textArea.addMouseWheelListener(new MouseWheelListener() {
 			public void mouseWheelMoved(MouseWheelEvent e) {
+				// Se mueve la rueda del ratón
 				String newText = textArea.getText() + "MouseWheelMoved \n";
 				textArea.setText(newText);
 			}
@@ -43,12 +44,14 @@ public class Ejercicio5 extends JFrame {
 		textArea.addMouseMotionListener(new MouseMotionAdapter() {
 			@Override
 			public void mouseDragged(MouseEvent e) {
+				// Se clicka y se arrastra el ratón
 				String newText = textArea.getText() + "MouseDragged \n";
 				textArea.setText(newText);
 			}
 
 			@Override
 			public void mouseMoved(MouseEvent e) {
+				// Se mueve el ratón
 				// Hago que este evento suceda solo una vez sino ocupa todo el textarea
 				if (!mouseMoved) {
 					String newText = textArea.getText() + "MouseMoved \n";
@@ -59,30 +62,31 @@ public class Ejercicio5 extends JFrame {
 			}
 		});
 		textArea.addMouseListener(new MouseAdapter() {
+			// Se hace click con el ratón
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				String newText = textArea.getText() + "MouseClicked \n";
 				textArea.setText(newText);
 			}
-
+			// El ratón entra en el JTextArea
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				String newText = textArea.getText() + "MouseEntered \n";
 				textArea.setText(newText);
 			}
-
+			// El ratón sale del JTextArea
 			@Override
 			public void mouseExited(MouseEvent e) {
 				String newText = textArea.getText() + "MouseExited \n";
 				textArea.setText(newText);
 			}
-
+			// Se ha presionado un botón del ratón
 			@Override
 			public void mousePressed(MouseEvent e) {
 				String newText = textArea.getText() + "MousePressed \n";
 				textArea.setText(newText);
 			}
-
+			// Se ha soltado un botón del ratón
 			@Override
 			public void mouseReleased(MouseEvent e) {
 				String newText = textArea.getText() + "MouseReleased \n";

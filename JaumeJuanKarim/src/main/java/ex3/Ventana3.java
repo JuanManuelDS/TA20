@@ -17,22 +17,6 @@ public class Ventana3 extends JFrame {
     private int valor,valor2;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					Ventana3 frame = new Ventana3();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
 	public Ventana3() {
@@ -43,16 +27,20 @@ public class Ventana3 extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new FlowLayout(FlowLayout.CENTER, 5, 5));
-		final JLabel lblNewLabel_1 = new JLabel("Boton 1: ");
+		
+		// -------------------JLABELS-------------------------------
+		final JLabel lblNewLabel_1 = new JLabel("Boton 1: 0");
 		contentPane.add(lblNewLabel_1);
-		final JLabel lblNewLabel = new JLabel("Boton 2: ");
+		final JLabel lblNewLabel = new JLabel("Boton 2: 0");
 		contentPane.add(lblNewLabel);
 		
+		// -------------------JBUTTONS-------------------------------
 		JButton btnNewButton = new JButton("Boton 1 ");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// Sumar y mostrar el contador de las veces que sea pulsado del Botón 1
 				valor++;
-				lblNewLabel_1.setText("Boton 2: "+Integer.toString(valor));
+				lblNewLabel_1.setText("Boton 1: "+Integer.toString(valor));
 			}
 		});
 		contentPane.add(btnNewButton);
@@ -60,11 +48,14 @@ public class Ventana3 extends JFrame {
 		JButton btnNewButton_1 = new JButton("Boton 2");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// Sumar y mostrar el contador de las veces que sea pulsado del Botón 2
 				valor2++;
-				lblNewLabel.setText("Boton 1: "+Integer.toString(valor2));
+				lblNewLabel.setText("Boton 2: "+Integer.toString(valor2));
 			}
 		});
 		contentPane.add(btnNewButton_1);
+		
+		setVisible(true);
 		
 	}
 }

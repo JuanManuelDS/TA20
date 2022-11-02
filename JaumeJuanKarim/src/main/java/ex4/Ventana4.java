@@ -29,10 +29,12 @@ public class Ventana4 extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		// --------------JLABEL------------------
 		JLabel lbl = new JLabel("Eventos");
 		lbl.setBounds(10, 111, 53, 14);
 		contentPane.add(lbl);
 		
+		// --------------JTEXTAREA------------------
 		JTextArea textArea = new JTextArea();
 		textArea.setBounds(66, 11, 260, 341);
 		contentPane.add(textArea);
